@@ -113,12 +113,73 @@
         footer ul li a {
             color: #fff;
             text-decoration: none;
-        }
+        }.menu-toggle {
+            align-items:center;
+  display: block; /* Ensure the hamburger icon is initially displayed */
+  align-items:center;
+            justify-content: center;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin: 4px 0;
+align-items:center ;}
+  
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.83);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.active {
+  display: flex;
+}
+.hidden-menu {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+}
+.hidden-menu.active {
+  display: block;
+}
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
     </style>
 </head>
 <body>
     <header> 
-        <h2><a href="../index.html">NCO - Directory</a></h2>
+        <h2><a href="../index.html">NCO - Ventures</a></h2>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span></div>
         <nav>
             <li><a href="../src/events.html">Events</a></li>
             <li><a href="../src/ventures.html">Ventures</a></li>
@@ -129,6 +190,61 @@
 
         </nav>
     </header>
+
+    <div class="overlay" onclick="closeHiddenMenu()"></div>
+    <nav class="hidden-menu">
+        <span class="close-icon" onclick="closeHiddenMenu()">X</span>
+        <ul>
+            <li><a href="../src/events.html">Events</a></li>
+            <li><a href="../src/ventures.html">Ventures</a></li>
+            <li><a href="../src/members.html">Directory</a></li>
+            <li><a href="../src/mission.html">Mission</a></li>
+            <li><a href="../src/donate.html">Donate</a></li>
+            <li><a href="../src/join.html">Donate</a></li>
+      
+    </nav>
+    <script>
+      // Function to toggle the hidden menu visibility
+      function toggleMenu() {
+          const overlay = document.querySelector('.overlay');
+          const hiddenMenu = document.querySelector('.hidden-menu');
+          overlay.style.display = 'block'; // Show overlay
+          hiddenMenu.style.display = 'block'; // Show hidden menu
+      }
+
+      // Function to close the hidden menu
+      function closeHiddenMenu() {
+          const overlay = document.querySelector('.overlay');
+          const hiddenMenu = document.querySelector('.hidden-menu');
+          overlay.style.display = 'none'; // Hide overlay
+          hiddenMenu.style.display = 'none'; // Hide hidden menu
+      }
+
+      // Function to handle screen resize
+      function handleResize() {
+          const menuToggle = document.querySelector('.menu-toggle');
+          const nav = document.querySelector('nav');
+          const hiddenMenu = document.querySelector('.hidden-menu');
+          const overlay = document.querySelector('.overlay');
+          if (window.innerWidth <= 600) {
+              menuToggle.style.display = 'block'; // Show hamburger icon
+              nav.style.display = 'none'; // Hide navigation menu
+              hiddenMenu.style.display = 'none'; // Hide hidden menu
+              overlay.style.display = 'none'; // Hide overlay
+          } else {
+              menuToggle.style.display = 'none'; // Hide hamburger icon
+              nav.style.display = 'flex'; // Show navigation menu
+              hiddenMenu.style.display = 'none'; // Hide hidden menu
+              overlay.style.display = 'none'; // Hide overlay
+          }
+      }
+
+      // Initial check on page load
+      window.onload = handleResize;
+
+      // Add event listener for window resize
+      window.onresize = handleResize;
+  </script>
 
     <section class="joining-section">
         <h1>Join Our Fraternity</h1>
