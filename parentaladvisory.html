@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Merch - NCO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#555">
+    <link rel="icon" type="image" href="../imgs/Dove_Logo_RED_CROSS-01.webp" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=C059+Roman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'C059 Roman', serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            background-image: url(../imgs/bg1.jpeg);
+        }
+        header h2 a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        header nav li {
+            margin: 0 15px;
+        }
+        header nav li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .mission {
+            background-color: #f5f5f5;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .mission h1 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+        .mission p {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .team-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .team-section h1 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+        .team-section .inner-width {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .team-section .pe {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 200px;
+            text-align: center;
+        }
+        .team-section .pe img {
+            border-radius: 50%;
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .team-section .p-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .team-section .p-des {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .team-section .p-sm a {
+            color: #333;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin: 0 10px;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }.menu-toggle {
+            align-items:center;
+  display: block; /* Ensure the hamburger icon is initially displayed */
+  align-items:center;
+            justify-content: center;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin: 4px 0;
+align-items:center ;}
+  
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.83);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.active {
+  display: flex;
+}
+.hidden-menu {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+}
+.hidden-menu.active {
+  display: block;
+}
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M99Q76GRZW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M99Q76GRZW');
+</script>
+<body>
+    <header> 
+        <h2><a href="../index.html">NCO - Ventures</a></h2>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span></div>
+            <nav>
+                <li><a href="./merch.html">Merch</a></li>
+                <li><a href="./src/ventures.html">Ventures</a></li>
+                <li><a href="./src/members.html">Directory</a></li>
+                <li><a href="./src/mission.html">Mission</a></li>
+                <li><a href="https://topjfund.com">Donate</a></li>
+                <li><a href="./src/join.html">Join</a></li>
+    
+            </nav>
+        </header>
+    
+        <div class="overlay" onclick="closeHiddenMenu()"></div>
+        <nav class="hidden-menu">
+            <span class="close-icon" onclick="closeHiddenMenu()">X</span>
+            <ul>
+                <li><a href="./merch.html">Merch</a></li>
+                <li><a href="./src/ventures.html">Ventures</a></li>
+                <li><a href="./src/members.html">Directory</a></li>
+                <li><a href="./src/mission.html">Mission</a></li>
+                <li><a href="https://topjfund.com">Donate</a></li>
+                <li><a href="./src/join.html">Join</a></li>
+      
+    </nav>
+    <script>
+      // Function to toggle the hidden menu visibility
+      function toggleMenu() {
+          const overlay = document.querySelector('.overlay');
+          const hiddenMenu = document.querySelector('.hidden-menu');
+          overlay.style.display = 'block'; // Show overlay
+          hiddenMenu.style.display = 'block'; // Show hidden menu
+      }
+
+      // Function to close the hidden menu
+      function closeHiddenMenu() {
+          const overlay = document.querySelector('.overlay');
+          const hiddenMenu = document.querySelector('.hidden-menu');
+          overlay.style.display = 'none'; // Hide overlay
+          hiddenMenu.style.display = 'none'; // Hide hidden menu
+      }
+
+      // Function to handle screen resize
+      function handleResize() {
+          const menuToggle = document.querySelector('.menu-toggle');
+          const nav = document.querySelector('nav');
+          const hiddenMenu = document.querySelector('.hidden-menu');
+          const overlay = document.querySelector('.overlay');
+          if (window.innerWidth <= 600) {
+              menuToggle.style.display = 'block'; // Show hamburger icon
+              nav.style.display = 'none'; // Hide navigation menu
+              hiddenMenu.style.display = 'none'; // Hide hidden menu
+              overlay.style.display = 'none'; // Hide overlay
+          } else {
+              menuToggle.style.display = 'none'; // Hide hamburger icon
+              nav.style.display = 'flex'; // Show navigation menu
+              hiddenMenu.style.display = 'none'; // Hide hidden menu
+              overlay.style.display = 'none'; // Hide overlay
+          }
+      }
+
+      // Initial check on page load
+      window.onload = handleResize;
+
+      // Add event listener for window resize
+      window.onresize = handleResize;
+  </script>
+
+
+    <section class="mission">
+                        <p><br><br></p>
+
+        <h1>Parental Advisory Tee</h1>
+        <p>
+        A 100% cotton tee featuring our signature "Parental Advisory" design, in honor of the strength shown by our former President. Available in Heavy Metal or Black.  
+        </p>
+    </section>
+
+    <div class="team-section">
+        <div class="inner-width" >
+            <h1>Shirts</h1>
+            <div class="pe" style="height: auto; width: 70%; max-width: 70%;">
+                <div class="p-name">Trump Parental Advisory Tee</div>
+                <div class="p-des">$35.00</div>
+                <div class="p-des">
+                    <img src="./imgs/parentaladivsorymockup.jpg" alt="" style="max-height: 100%; max-width: 100%; width: auto; height: auto;">
+                </div>
+                <div class="p-sm">
+                    <a href="https://buy.stripe.com/eVa3dJ8KL22daxafZ2"></a><button style="height:7em; width:8em; color:white; background-color: black;;">Buy Now</button>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <p><br></p>
+      
+    
+            
+
+    <footer>
+        <p>Maintained by <a href="https://thethinkingcomputer.com">The Thinking Computer</a></p>
+        <ul>
+            <li><a href="https://twitter.com/nco_official_"><i class="fab fa-twitter fa-2x"></i></a></li>
+           </ul>
+    </footer>
+</body>
+</html>
